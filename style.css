@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-family: 'Montserrate';
+    src: url('Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+    font-family: 'Heebo';
+    src: url('Fonts/Heebo/Heebo-VariableFont_wght.ttf');
+    font-family: 'Poppins';
+    src: url('Fonts/Poppins/Poppins-Light.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +22,7 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
@@ -370,7 +381,7 @@ nav {
 
 .carousel-btn {
     display: flex;
-    gap: 19px;
+    gap: 8px;
 }
 
 .carousel-btn i {
