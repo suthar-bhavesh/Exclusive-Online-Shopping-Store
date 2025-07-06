@@ -8,7 +8,8 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -57,20 +58,27 @@
                         </ul>
                     </div>
                     <div class="search-cart" id="search-mobile">
-
                         <div class="search-input">
                             <input type="text" placeholder="What are you looking for?" name="search" />
                         </div>
                         <div class="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <a href="wishlist.html">
-                            <div class="wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                        </a>
+                        <div class="wishlist">
+                            <a href="wishlist.html">
+                                <i class="fa-regular fa-heart" onclick="toggleWishlist(this)" data-product-id="123"></i>
+                                <span class="wishlist-count" id="wishlist-count">0</span>
+                            </a>
+                        </div>
                         <div class="cart-list">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <a href="#">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                        <div class="user-profile">
+                            <a href="user-profile.html">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +125,7 @@
                         <i class="fa-solid fa-bars"></i>
                     </div>
                     <a href="wishlist.html">
-                        <div class="wishlist" onclick="toggleWishlist(this)">
+                        <div class="m-wishlist">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </a>
@@ -241,19 +249,19 @@
                         <div class="countdown">
                             <div class="clock">
                                 <p>Days</p>
-                                <span>00 </span> &nbsp : &nbsp
+                                <span id="days">00 </span> &nbsp : &nbsp
                             </div>
                             <div class="clock">
                                 <p>Hours</p>
-                                <span>00 </span> &nbsp : &nbsp
+                                <span id="hours">00 </span> &nbsp : &nbsp
                             </div>
                             <div class="clock">
                                 <p>Minutes</p>
-                                <span>00 </span> &nbsp : &nbsp
+                                <span id="minutes">00 </span> &nbsp : &nbsp
                             </div>
                             <div class="clock">
                                 <p>Seconds</p>
-                                <span>00 </span>
+                                <span id="seconds">00 </span>
                             </div>
                         </div>
                     </div>
@@ -262,11 +270,148 @@
                     <i class="fa-solid fa-arrow-left"></i>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
-                
-                
             </div>
-
-
+            <div class="cart-carousel">
+                <div class="carousel-content">
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/VG-remote.png" alt="HAVIT HV-G92 Game">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart">Add to cart</p>
+                            </a>
+                            <div class="more-option">
+                                <div class="discount">
+                                    <p>-40%</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>HAVIT HV-G92 Game</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 10285 <span style="text-decoration: line-through;">RS. 160</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(88)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/gaming-keyboard.png" alt="AK-900 Wired Keyboard">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart">Add to cart</p>
+                            </a>
+                            <div class="more-option">
+                                <div class="discount">
+                                    <p>-35%</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>AK-900 Wired Keyboard</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 82281 <span style="text-decoration: line-through;">Rs. 99423</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(75)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/LED.png" alt="IPS LCD Gaming Monitor">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart">Add to cart</p>
+                            </a>
+                            <div class="more-option">
+                                <div class="discount">
+                                    <p>-30%</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>IPS LCD Gaming Monitor</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 31712 <span style="text-decoration: line-through;">RS. 34284</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/white-chair.png" alt="S-Series Comfort Chair">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart">Add to cart</p>
+                            </a>
+                            <div class="more-option">
+                                <div class="discount">
+                                    <p>-25%</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>S-Series Comfort Chair</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 32141 <span style="text-decoration: line-through;">RS. 34284</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-product-btn">
+                <button>
+                    View All Products
+                </button>
+            </div>
         </div>
     </section>
 
