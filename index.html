@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
     <!-- Slick CSS -->
@@ -64,15 +66,16 @@
                         <div class="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <div class="wishlist">
+                        <div class="Wish-list">
                             <a href="wishlist.html">
-                                <i class="fa-regular fa-heart" onclick="toggleWishlist(this)" data-product-id="123"></i>
-                                <span class="wishlist-count" id="wishlist-count">0</span>
+                                <i class="fa-regular fa-heart"></i>
+                                <span class="wishlist-count" id="item-count">0</span>
                             </a>
                         </div>
                         <div class="cart-list">
                             <a href="#">
                                 <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="wishlist-count" id="wishlist-count">0</span>
                             </a>
                         </div>
                         <div class="user-profile">
@@ -238,7 +241,7 @@
         <div class="container">
             <div class="sales-product">
                 <div class="selling-main-product">
-                    <div class="section-titile">
+                    <div class="section-name">
                         <div class="red-box"></div>
                         <h3>Today's</h3>
                     </div>
@@ -286,7 +289,8 @@
                                     <p>-40%</p>
                                 </div>
                                 <div class="action-icon">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="101"></i>
                                     <i class="fa-regular fa-eye"></i>
                                 </div>
                             </div>
@@ -303,7 +307,7 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <span>(88)</span>
+                            <span>(0)</span>
                         </div>
                     </div>
                     <div class="product-details">
@@ -319,7 +323,8 @@
                                     <p>-35%</p>
                                 </div>
                                 <div class="action-icon">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="102"></i>
                                     <i class="fa-regular fa-eye"></i>
                                 </div>
                             </div>
@@ -336,7 +341,7 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <span>(75)</span>
+                            <span>(0)</span>
                         </div>
                     </div>
                     <div class="product-details">
@@ -352,7 +357,8 @@
                                     <p>-30%</p>
                                 </div>
                                 <div class="action-icon">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="103"></i>
                                     <i class="fa-regular fa-eye"></i>
                                 </div>
                             </div>
@@ -385,7 +391,8 @@
                                     <p>-25%</p>
                                 </div>
                                 <div class="action-icon">
-                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="104"></i>
                                     <i class="fa-regular fa-eye"></i>
                                 </div>
                             </div>
@@ -415,7 +422,257 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="categories-content">
+                <div class="section-name">
+                    <div class="red-box"></div>
+                    <h3>Categories</h3>
+                </div>
+                <div class="categories-main-content">
+                    <h3>Browse By Category</h3>
+                </div>
+                <div class="multiple-icon">
+                    <a href="#">
+                        <div class="cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M306-92q-21.75 0-37.87-16.13Q252-124.25 252-146v-668q0-22.78 15.61-38.39Q283.23-868 306-868h351q22.53 0 38.26 16.12Q711-835.75 711-814v138q15-1 26 8.15t11 22.71V-579q0 14.39-11 23.19-11 8.81-26 7.81v402q0 21.75-15.74 37.87Q679.53-92 657-92H306Zm0-22h351q14 0 23-9t9-23v-668q0-14-9-23t-23-9H306q-14 0-23 9t-9 23v668q0 14 9 23t23 9Zm-32 0v-732 732Zm207.5-590q10.5 0 18-7t7.5-18q0-11-7.51-18T482-754q-11 0-18 7t-7 18q0 11 7 18t17.5 7Z" />
+                            </svg>
+                            <span>Phones</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M391-172v-27l75-75H186q-22.77 0-38.39-15.61Q132-305.23 132-328v-406q0-22.78 15.61-38.39Q163.23-788 186-788h588q22.78 0 38.39 15.61T828-734v406q0 22.77-15.61 38.39Q796.78-274 774-274H494l75 75v27H391ZM154-331h652v-403q0-12-10-22t-22-10H186q-12 0-22 10t-10 22v403Zm0 0v-435 435Z" />
+                            </svg>
+                            <span>Computers</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M392-406v-148h28v148h-28Zm74 0v-108h28v108h-28Zm74 0v-68h28v68h-28ZM429-806h102H429Zm0 652H531 429Zm-17 22-40-147q-53-26-86.5-80T252-480q0-67 33.5-121t86.5-80l40-147h136l40 147q53 26 86.5 80T708-480q0 67-33.5 121T588-279l-40 147H412Zm67.87-142Q566-274 626-333.87q60-59.86 60-146Q686-566 626.13-626q-59.86-60-146-60Q394-686 334-626.13q-60 59.86-60 146Q274-394 333.87-334q59.86 60 146 60ZM399-692q22-7 41.5-11t39.5-4q20 0 39.5 4t41.5 11l-30.35-114H429l-30 114Zm30.35 538H531l30-114q-21.54 7-41.27 10.5Q500-254 480-254q-20 0-39.73-3.5Q420.54-261 399-268l30.35 114Z" />
+                            </svg>
+                            <span>SmartWatch</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M480-302q58 0 97.5-39.5T617-439q0-58-39.5-97.5T480-576q-58 0-97.5 39.5T343-439q0 58 39.5 97.5T480-302Zm0-22q-49 0-82-33t-33-82q0-49 33-82t82-33q49 0 82 33t33 82q0 49-33 82t-82 33ZM186-172q-22.77 0-38.39-15.61Q132-203.23 132-226v-426q0-23 15.61-38.5Q163.23-706 186-706h122l74-82h196l74 82h122q23 0 38.5 15.5T828-652v426q0 22.77-15.5 38.39Q797-172 774-172H186Zm0-22h588q14 0 23-9t9-23v-426q0-13-9-22.5t-23-9.5H642l-74-82H392l-74 82H186q-14 0-23 9.5t-9 22.5v426q0 14 9 23t23 9Zm294-245Z" />
+                            </svg>
+                            <span>Camera</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M302-172h-76q-22.77 0-38.39-15.61Q172-203.23 172-226v-254q0-64 24-120t66-98q42-42 98-66t120-24q64 0 120 24t98 66q42 42 66 98t24 120v254q0 22.77-15.61 38.39Q756.78-172 734-172h-76v-217h108v-91q0-119.51-83.22-202.75Q599.57-766 480.11-766q-119.47 0-202.79 83.25Q194-599.51 194-480v91h108v217Zm-22-195h-86v141q0 12 10 22t22 10h54v-173Zm400 0v173h54q12 0 22-10t10-22v-141h-86Zm-400 0h-86 86Zm400 0h86-86Z" />
+                            </svg>
+                            <span>HeadPhone</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cat-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                                fill="#e3e3e3">
+                                <path
+                                    d="M186-292q-22.77 0-38.39-15.61Q132-323.23 132-346.33v-267.34q0-23.11 15.61-38.72Q163.23-668 186-668h588q22.78 0 38.39 15.61T828-613.67v267.34q0 23.1-15.61 38.72Q796.78-292 774-292H186Zm0-22h588q12 0 22-10t10-22v-268q0-12-10-22t-22-10H186q-12 0-22 10t-10 22v268q0 12 10 22t22 10Zm123-68h22v-87h87v-22h-87v-87h-22v87h-87v22h87v87Zm274.88-5q12.12 0 20.62-8.38 8.5-8.38 8.5-21t-8.38-21.12q-8.38-8.5-20.5-8.5T563-437.62q-9 8.38-9 21t9.09 21.12q9.09 8.5 20.79 8.5Zm111-127q12.12 0 20.62-8.38 8.5-8.38 8.5-21t-8.38-21.12q-8.38-8.5-20.5-8.5T674-564.62q-9 8.38-9 21t9.09 21.12q9.09 8.5 20.79 8.5ZM154-314v-332 332Z" />
+                            </svg>
+                            <span>Gaming</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section>
+        <div class="container">
+            <div class="selling-product">
+                <div class="mains-selling">
+                    <div class="section-heading">
+                        <div class="section-name">
+                            <div class="red-box"></div>
+                            <h3>Categories</h3>
+                        </div>
+                        <div class="categories-main-content">
+                            <h3>Best Selling Products</h3>
+                        </div>
+                    </div>
+                    <div class="item-more-btn">
+                        <button>View All</button>
+                    </div>
+                </div>
+                <div class="Best-product">
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/Light-The-North-Face-x-Gucci-coat 1.png" alt="Gucci Coat">
+                            </div>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="105"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>The north coat</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 22284 <span style="text-decoration: line-through;">Rs. 30855</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/Light-Gucci-Sav.png" alt="Gucci Bag">
+                            </div>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="106"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>Gucci duffle bag</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 82281 <span style="text-decoration: line-through;">Rs. 99423</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/gammaxx.png" alt="CPU-Cooler">
+                            </div>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="107"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>TRGB liquid CPU Cooler</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 13713 <span style="text-decoration: line-through;">Rs. 14570</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/sam-moghadam.png" alt="sam-moghadam">
+                            </div>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
+                                        data-product-id="108"></i>
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>Small BookSelf</h5>
+                        </div>
+                        <div class="price">
+                            <p>RS. 30855</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cat-wise-new-sale">
+                <div class="sale-add">
+                    <div class="sale-banner">
+                        <div class="sale-title">
+                            <h2>Categories</h2>
+                        </div>
+                        <div class="sale-para">
+                            <h1>Enhance Your Music Experience</h1>
+                        </div>
+                        <div class="countdown">
+                            <div class="sale-clock">
+                                <span id="hours">00 </span>
+                                <p>Hours</p>
+                            </div>
+                            <div class="sale-clock">
+                                <span id="days">00 </span>
+                                <p>Days</p>
+                            </div>
+                            <div class="sale-clock">
+                                <span id="minutes">00 </span>
+                                <p>Minutes</p>
+                            </div>
+                            <div class="sale-clock">
+                                <span id="seconds">00 </span>
+                                <p>Seconds</p>
+                            </div>
+                        </div>
+                        <div class="buy-btn">
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="sale-product-img">
+                        <img src="img/JBL_BOOMBOX2.png" alt="JBL Speaker">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

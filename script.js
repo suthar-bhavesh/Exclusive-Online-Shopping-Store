@@ -1,3 +1,5 @@
+// banner Carousel
+
 $(document).ready(function () {
     $('.banner-carousel').slick({
         dots: true,
@@ -39,12 +41,14 @@ $(document).ready(function () {
     });
 });
 
+
+// mobile-nav
+
 function toggleMenu() {
     $('.mobile-nav').toggleClass('show');
 }
 
-
-
+// search input
 
 $(document).ready(function () {
     $('#search-body').ready(function () {
@@ -54,6 +58,8 @@ $(document).ready(function () {
 
 });
 
+
+//sale Timer
 
 let endTime = localStorage.getItem("FlashSaleEndtime");
 if (!endTime) {
@@ -89,6 +95,75 @@ function updateCountdown() {
     document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
 }
 
+
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+
+// Get wishlist from localStorage
+function getWishlist() {
+    const raw = localStorage.getItem('wishlist') || '[]';
+
+    try {
+        const list = JSON.parse(raw);
+        return Array.isArray(list) ? list.filter(Boolean) : [];
+    } catch (e) {
+        console.error("Invalid JSON in localStorage:", raw);
+        return [];
+    }
+}
+
+
+// Save wishlist back to localStorage
+function setWishlist(list) {
+    const cleaned = list.filter(Boolean); // remove nulls if any
+    localStorage.setItem('wishlist', JSON.stringify(cleaned));
+}
+
+// Toggle item in wishlist
+function toggleWishlist(heart) {
+    const productId = heart.dataset.productId;
+    let wishlist = getWishlist();
+
+    const index = wishlist.indexOf(productId);
+
+    if (index > -1) {
+        wishlist.splice(index, 1);
+        heart.classList.remove('filled');
+        heart.classList.remove('fa-solid');
+        heart.classList.add('fa-regular');
+    } else {
+        wishlist.push(productId);
+        heart.classList.add('filled');
+        heart.classList.remove('fa-regular');
+        heart.classList.add('fa-solid');
+    }
+
+    setWishlist(wishlist);
+    updateWishlistCount();
+}
+
+// Update wishlist count
+function updateWishlistCount() {
+    const count = getWishlist().length;
+    const countEl = document.getElementById('item-count');
+    if (countEl) {
+        countEl.innerText = count;
+    }
+}
+
+// Highlight saved hearts on page load
+function highlightSavedHearts() {
+    const saved = new Set(getWishlist());
+    document.querySelectorAll('.heart-icon').forEach(heart => {
+        if (saved.has(heart.dataset.productId)) {
+            heart.classList.add('filled');
+            heart.classList.remove('fa-regular');
+            heart.classList.add('fa-solid');
+        }
+    });
+}
+
+// Run on page load
+updateWishlistCount();
+highlightSavedHearts();
