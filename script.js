@@ -167,3 +167,12 @@ function highlightSavedHearts() {
 // Run on page load
 updateWishlistCount();
 highlightSavedHearts();
+
+
+function itemColor(el) {
+    document.querySelectorAll('.border-item-color').forEach(item => {
+        item.classList.remove('active');
+    });
+
+    el.classList.add('active');
+}
