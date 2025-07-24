@@ -1,5 +1,7 @@
 // banner Carousel
 
+// const { default: Swiper } = require("swiper");
+
 $(document).ready(function () {
     $('.banner-carousel').slick({
         dots: true,
@@ -162,3 +164,22 @@ function itemColor(el) {
 
     el.classList.add('active');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Init Swiper only if window is mobile
+    const swiper = new Swiper(".mobile-swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+});

@@ -18,7 +18,12 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     <!-- Font Awesome (for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Swiper loaded -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <title>Exclusive Online Store</title>
 </head>
@@ -84,7 +89,7 @@
                     </div>
                 </div>
                 <div class="hamburger" onclick="toggleMenu()">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </div>
                 <div class="mobile-nav">
                     <div class="mobile-navlink">
@@ -267,10 +272,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-btn">
+                <div class="mobile-selling">
+                    <div class="mobile-heading">
+                        <div class="left-heading">
+                            <div class="red-box"></div>
+                            <h3>Today's</h3>
+                        </div>
+                        <div class="main-heading">
+                            <h2>
+                                Flash Sales
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="sales-countdown mobile-countdown">
+
+                        <div class="countdown">
+                            <div class="clock">
+                                <p>Days</p>
+                                <span id="days">00 </span> &nbsp : &nbsp
+                            </div>
+                            <div class="clock">
+                                <p>Hours</p>
+                                <span id="hours">00 </span> &nbsp : &nbsp
+                            </div>
+                            <div class="clock">
+                                <p>Minutes</p>
+                                <span id="minutes">00 </span> &nbsp : &nbsp
+                            </div>
+                            <div class="clock">
+                                <p>Seconds</p>
+                                <span id="seconds">00 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="carousel-btn">
                     <i class="fa-solid fa-arrow-left"></i>
                     <i class="fa-solid fa-arrow-right"></i>
-                </div>
+                </div> -->
             </div>
             <div class="cart-carousel">
                 <div class="carousel-content">
@@ -414,9 +453,9 @@
             </div>
 
             <!-- Mobile screen Slider -->
-            <div class="mobile-swiper">
-                <div class="carousel-content one-time">
-                    <div class="product-details">
+            <div class="mobile-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="product-details swiper-slide">
                         <div class="cart">
                             <div class="product-img">
                                 <img src="img/VG-remote.png" alt="HAVIT HV-G92 Game">
@@ -450,7 +489,7 @@
                             <span>(0)</span>
                         </div>
                     </div>
-                    <div class="product-details">
+                    <div class="product-details swiper-slide">
                         <div class="cart">
                             <div class="product-img">
                                 <img src="img/gaming-keyboard.png" alt="AK-900 Wired Keyboard">
@@ -484,7 +523,7 @@
                             <span>(0)</span>
                         </div>
                     </div>
-                    <div class="product-details">
+                    <div class="product-details swiper-slide">
                         <div class="cart">
                             <div class="product-img">
                                 <img src="img/LED.png" alt="IPS LCD Gaming Monitor">
@@ -518,7 +557,7 @@
                             <span>(0)</span>
                         </div>
                     </div>
-                    <div class="product-details">
+                    <div class="product-details swiper-slide">
                         <div class="cart">
                             <div class="product-img">
                                 <img src="img/white-chair.png" alt="S-Series Comfort Chair">
@@ -552,6 +591,7 @@
                             <span>(0)</span>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="view-product-btn">
@@ -1310,6 +1350,10 @@
 
     <!-- ✅ Then load Slick JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <!-- Swiper Loaded -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
 </body>
