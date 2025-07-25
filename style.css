@@ -743,7 +743,7 @@ nav {
     margin-top: 80px;
 }
 
-.categories-main-content h3 {
+.categories-main-content h2 {
     font-size: 36px;
     font-weight: 600;
     font-family: "Inter", sans-serif;
@@ -1193,6 +1193,109 @@ footer {
     text-decoration: underline;
 }
 
+.shop-nowbtn i {
+    color: #fff;
+}
+
+.sign-section {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up-form form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    gap: 40px;
+}
+
+.sign-head h3 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.sign-head p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+form input {
+    display: flex;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #7D8184;
+    padding-bottom: 8px;
+    color: #7D8184;
+    font-size: 16px;
+}
+
+.sumbit-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.account-creation {
+    background-color: #DB4444;
+    outline: none;
+    border: none;
+    padding: 12px 122px 12px 122px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.google-sign {
+    cursor: pointer;
+    display: flex;
+    border: 3px solid #F5F5F5;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.exit-login {
+    color: #7D8184;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.exit-login a {
+    text-decoration: none;
+    color: #7D8184;
+    border-bottom: 1px solid #000;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-login {
+    background-color: #DB4444;
+    outline: none;
+    border: none;
+    padding: 16px 48px 16px 48px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: #DB4444;
+}
+
 @media screen and (max-width: 991px) {}
 
 @media screen and (max-width: 768px) {
@@ -1240,6 +1343,7 @@ footer {
         transition: opacity 0.3s ease, transform 0.3s ease;
         position: absolute;
         width: 100%;
+        left: 0;
     }
 
     .mobile-nav.show {
@@ -1250,10 +1354,10 @@ footer {
     }
 
     .mobile-navlink {
-        /* padding: 10px; */
+        padding: 10px;
         margin-top: 14px;
         background-color: #fff;
-        width: 94%;
+        width: 100%;
     }
 
     .mobile-navlink ul {
@@ -1440,14 +1544,13 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        align-items: center;
     }
 
     .mobile-heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 173px;
+        gap: 143px;
     }
 
     .left-heading {
@@ -1456,8 +1559,15 @@ footer {
         align-items: center;
     }
 
+    .left-heading h3 {
+        font-size: 16px;
+    }
+
     .mobile-countdown {
         margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .multiple-icon {
@@ -1564,6 +1674,7 @@ footer {
 
     .subcribe-request i {
         transform: translateY(49%);
+        right: 19px;
     }
 
     .silver-border {
@@ -1575,7 +1686,7 @@ footer {
     }
 
     .countdown {
-        gap: 29px;
+        gap: 22px;
     }
 
     .view-product-btn {
@@ -1594,4 +1705,57 @@ footer {
         padding: 0 23px;
         height: 41px;
     }
+
+    .discount-shopbtn h3 {
+        max-width: 317px !important;
+    }
+
+    .brand-image img {
+        height: 228px;
+    }
+
+    .subcribe-request input {
+        width: 100%;
+    }
+
+    .sale-clock {
+        width: 58px;
+        height: 58px;
+    }
+
+    .sale-clock p {
+        font-size: 10px;
+    }
+
+    .shop-nowbtn i {
+        color: #fff;
+    }
+
+    .categories-main-content h2 {
+        font-size: 23px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .slick-initialized .slick-slide {
+        flex-direction: row;
+    }
+
+    .sales-section {
+        margin-top: 60px;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0 !important;
+    }
+
+    .carousel-cart {
+        justify-content: space-evenly;
+    }
+
+    .subcribe-request {
+        width: 28%;
+    }
+
 }
