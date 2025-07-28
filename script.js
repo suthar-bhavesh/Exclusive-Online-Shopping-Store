@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.banner-carousel').slick({
         dots: true,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000,
         arrows: false,
         speed: 2000,
@@ -45,6 +45,11 @@ $(document).ready(function () {
     })
 
 });
+
+
+function profilemanage() {
+    $('#clickable-account-drop').toggleClass('account-setting');
+}
 
 
 //sale Timer
@@ -181,5 +186,23 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+    });
+});
+
+// On Scroll Click arrow 
+window.onscroll = function () {
+    const btn = document.getElementById("scroll-up");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+
+};
+
+document.getElementById("scroll-up").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
 });
