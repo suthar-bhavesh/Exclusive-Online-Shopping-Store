@@ -1919,6 +1919,48 @@ label.required::after {
     font-weight: normal;
 }
 
+.about{
+    position: relative;
+    overflow: hidden;
+    height: 609px;
+    display: flex;
+    align-items: center;
+}
+
+.about-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+
+}
+
+.company-para {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.company-para p{
+    text-align: justify;
+    max-width: 525px;
+}
+
+.about-title h2{
+    font-size: 54px;
+    font-weight: 700;
+}
+
+
+.about-hero-image{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
 @media screen and (max-width: 991px) {}
 
 @media screen and (max-width: 768px) {
