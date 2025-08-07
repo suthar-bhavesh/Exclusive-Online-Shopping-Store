@@ -24,6 +24,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    font-weight: 500;
 }
 
 .advertise {
@@ -557,6 +558,7 @@ nav {
     background-color: #fff;
     padding: 9px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .add-to-cart {
@@ -574,6 +576,10 @@ nav {
     cursor: pointer;
 }
 
+.add-to-cart i {
+    padding-right: 8px;
+}
+
 .cart:hover .add-to-cart {
     transform: translateY(0);
     display: block;
@@ -585,7 +591,7 @@ nav {
 
 .product-title h5 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .price {
@@ -1232,7 +1238,7 @@ footer {
     font-weight: 600;
 }
 
-form input {
+.sign-up-form input {
     display: flex;
     outline: none;
     border: none;
@@ -1371,6 +1377,546 @@ form input {
     display: flex;
     gap: 6px;
     align-items: center;
+}
+
+.wishlist-content {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+}
+
+.wishlist-head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wishlist-title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cart-all-btn {
+    display: flex;
+}
+
+.cart-all-btn button {
+    padding: 16px 48px 16px 48px;
+    outline: none;
+    background: transparent;
+    border: 2px solid #7D8184;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.cart-item {
+    margin-top: 60px;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.path {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.path a {
+    text-decoration: none;
+    color: #000;
+}
+
+.product-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cart-content {
+    display: flex;
+    /* width: 100%; */
+}
+
+.cart-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0fr;
+    box-shadow: 0 5px 5px #00000010;
+    padding: 24px 40px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.cart-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cart-items {
+    display: grid;
+    grid-template-columns: 321px 1fr 376px 0fr;
+    box-shadow: 0 5px 5px #00000010;
+    padding: 24px 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.item-img-name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.item-img-name p {
+    font-weight: 600;
+}
+
+.item-price p {
+    font-weight: 600;
+}
+
+.item-img-name img {
+    width: 50px;
+    height: 39px;
+}
+
+.item-img-name i {
+    display: none;
+}
+
+.item-img-name i {
+    position: absolute;
+    font-size: 9px;
+    color: #fff;
+    background-color: #FB1314;
+    border-radius: 50%;
+    padding: 4px;
+    top: -10px;
+    left: -7px;
+    transition: 0.9s ease-in-out;
+    display: block;
+    cursor: pointer;
+}
+
+.item-img-name .remove-item {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.item-img-name:hover .remove-item {
+    visibility: visible;
+    opacity: 1;
+}
+
+.item-quantity input {
+    display: flex;
+    width: 72px;
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #7D8184;
+    font-weight: 600;
+}
+
+.cart-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-btn a {
+    text-decoration: none;
+
+}
+
+.cart-updatebtn {
+    display: flex;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #7D8184;
+    background: transparent;
+    padding: 16px 48px 16px 48px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.coupan-code {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.coupan-codeSubmit {
+    gap: 16px;
+    display: flex;
+}
+
+.coupan-codeSubmit button {
+    padding: 16px 48px;
+    width: 290px;
+    height: 56px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #DB4444;
+    color: #fff;
+}
+
+.coupan-code input {
+    width: 300px;
+    height: 56px;
+    padding: 16px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #7D8184;
+    font-size: 16px;
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #363738;
+    border-radius: 4px;
+    padding: 32px 24px;
+    width: 470px;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid #7D8184;
+    padding-bottom: 16px;
+}
+
+.pricing p {
+    font-weight: 600;
+}
+
+.pricing span {
+    font-weight: 600;
+}
+
+.item-subtotal p {
+    font-weight: 600;
+}
+
+.cart-total button {
+    padding: 16px 48px;
+    width: 260px;
+    height: 56px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #DB4444;
+    color: #fff;
+}
+
+.checkOut-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-total div:nth-child(4) {
+    border-bottom: none;
+}
+
+.item-billing {
+    display: flex;
+    gap: 173px;
+}
+
+.billing-cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cart-head {
+    margin-bottom: 48px;
+}
+
+.cart-head h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+}
+
+.form-group input {
+    border-radius: 4px;
+}
+
+.form-group label {
+    color: #7D8184;
+}
+
+label.required::after {
+    content: "*";
+    color: #FB1314;
+    margin-left: 2px;
+}
+
+.form-group input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 14px;
+}
+
+.info-safe {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.info-safe input {
+    accent-color: #DB4444;
+    width: 24px;
+    height: 24px;
+}
+
+.info-safe p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.check-out-itemDetail {
+    margin-top: 129px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.checkOut-price {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkOut-price label {
+    font-weight: 600;
+}
+
+.bank-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.finale-code {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.finale-code button {
+    padding: 16px 48px;
+    width: 211px;
+    height: 56px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #DB4444;
+    color: #fff;
+}
+
+.finale-code input {
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    width: 300px;
+    padding: 16px;
+}
+
+.place-order button {
+    padding: 16px 48px;
+    width: 190px;
+    height: 56px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #DB4444;
+    color: #fff;
+}
+
+.path-username {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.username h4 {
+    font-weight: normal;
+}
+
+.username span {
+    color: #DB4444;
+}
+
+.path p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.account-update {
+    display: flex;
+    gap: 73px;
+    width: 100%;
+}
+
+.account-sidebar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.account-heading {
+    display: flex;
+}
+
+.account-heading h3 {
+    font-size: 16px;
+}
+
+.account-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-link ul li {
+    list-style-type: none;
+}
+
+.account-link a {
+    text-decoration: none;
+    color: #7D8184;
+    font-size: 16px;
+}
+
+.profile-section {
+    display: flex;
+    width: 100%;
+}
+
+.user-profile-box {
+    display: flex;
+    box-shadow: 0 5px 5px #00000010;
+    width: 100%;
+    height: 100%;
+    padding: 40px 80px;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile-head h4 {
+    color: #DB4444;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.profile-form {
+    display: flex;
+}
+
+.form-fields {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 24px;
+}
+
+.profile-f {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-f input {
+    width: 330px;
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    padding: 13px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.profile-pwd {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.profile-pwd input {
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    padding: 13px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-btn{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.form-btn button{
+    background-color: #DB4444;
+    padding: 16px 48px;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.form-btn a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 @media screen and (max-width: 991px) {}

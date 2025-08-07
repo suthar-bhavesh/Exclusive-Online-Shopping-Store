@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.banner-carousel').slick({
         dots: true,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1000,
         arrows: false,
         speed: 2000,

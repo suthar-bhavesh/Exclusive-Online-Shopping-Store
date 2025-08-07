@@ -4,11 +4,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_down" />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Swiper loaded -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Exclusive Online Store-Wishlist</title>
 </head>
 
 <body>
+    <div class="advertise">
+        <div class="container">
+            <div class="add-content">
+                <div class="add-para">
+                    <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="#">Shop Now</a></p>
+                </div>
+                <div class="lang-btn">
+                    <button>
+                        English <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="navbar">
+                    <div class="logo">
+                        <h1>
+                            <a href="index.html">
+                                Exclusive
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="navlink">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="Sign-up.html">Sign Up</a></li>
+                        </ul>
+                    </div>
+                    <div class="search-cart" id="search-mobile">
+                        <div class="search-input">
+                            <input type="search" placeholder="What are you looking for?" name="search" id="search" />
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="Wish-list">
+                            <a href="wishlist.html">
+                                <i class="fa-regular fa-heart"></i>
+                                <span class="wishlist-count" id="item-count">0</span>
+                            </a>
+                        </div>
+                        <div class="cart-list">
+                            <a href="cart.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="cartlist-count" id="item-count">0</span>
+                            </a>
+                        </div>
+                        <div class="user-profile">
+                            <button onclick="profilemanage()">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                        </div>
+                        <div id="clickable-account-drop">
+                            <ul>
+                                <li><a href=""><i class="fa-solid fa-user"></i>Manage My Account</a></li>
+                                <li><a href="#"><i class="fa-solid fa-bucket"></i>My Order</a></li>
+                                <li><a href="#"><i class="fa-solid fa-xmark"></i>Cancellation</a></li>
+                                <li><a href="#"><i class="fa-solid fa-star"></i>My Review</a></li>
+                                <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="mobile-nav">
+                    <div class="mobile-navlink">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="Sign-up.html">Sign Up</a></li>
+                        </ul>
+                        <!-- <div class="lang-btn" onclick="toggleLangDropdown()">
+                            <button>
+                                English
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </button>
+                            <ul class="multiple-lang"></ul>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="m-search-icons">
+                    <a href="user-profile.html">
+                        <div class="user-profile">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </a>
+                    <div class="search-icon" onclick="toggleSearch()">
+                        <a href="search.html">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <div class="wishlist">
+                        <a href="wishlist.html">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="wishlist-count" id="item-count">0</span>
+                        </a>
+                    </div>
+                    <div class="cart-list">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cartlist-count" id="item-count">0</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <section>
+        <div class="container">
+            <div class="wishlist-content">
+                <div class="wishlist-head">
+                    <div class="wishlist-title">
+                        <div class="red-box"></div>
+                        <h3>Wishlist</h3>
+                        <span class="product-count">(0)</span>
+                    </div>
+                    <div class="cart-all-btn">
+                        <a href="#">
+                            <button>Move All To Bag</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/Light-Gucci-Sav.png" alt="Gucci Perfume.png">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="more-option">
+                                <div class="discount">
+                                    <p>-35%</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>Gucci duffle bag</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 83331 <span style="text-decoration: line-through;">Rs. 100692</span></p>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/gammaxx.png" alt="CPU - Cooler">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>RGB liquid CPU Cooler</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 171023</p>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/USB Gamepad.png" alt="GP11 Shooter USB Gamepad">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>GP11 Shooter USB Gamepad</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 47991</p>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/quilted-satin-jacket 1.png" alt="Quilted Satin Jacket">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>Quilted Satin Jacket</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 65442</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wishlist-head">
+                    <div class="wishlist-title">
+                        <div class="red-box"></div>
+                        <h3>Just For you</h3>
+                    </div>
+                    <div class="cart-all-btn">
+                        <a href="#">
+                            <button>See All</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/ASUS - ideapad-gaming-.png" alt="ASUS - ideapad-gaming">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="more-option">
+                                <div class="discount">
+                                    <p>-35%</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>ASUS FHD Gaming Laptop</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 83766 <span style="text-decoration: line-through;">Rs. 101217</span></p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/LED.png" alt="IPS LCD Gaming Monitor">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>IPS LCD Gaming Monitor</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 101217</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/VG-remote.png" alt="HAVIT HV-G92 Game">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="cat-more-option" id="img-badge">
+                                <div class="badge">
+                                    <p>New</p>
+                                </div>
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>HAVIT HV-G92 Game</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 48863</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="cart">
+                            <div class="product-img">
+                                <img src="img/gaming-keyboard.png" alt="AK-900 Wired Keyboard">
+                            </div>
+                            <a href="#">
+                                <p class="add-to-cart"> <i class="fa-solid fa-cart-shopping"></i>Add to cart</p>
+                            </a>
+                            <div class="cat-more-option">
+                                <div class="action-icon">
+                                    <i class="fa-regular fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <h5>AK-900 Wired Keyboard</h5>
+                        </div>
+                        <div class="price">
+                            <p>Rs. 17451</p>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -79,6 +463,17 @@
             <p>© Copyright Exclusive Online Store 2025. All right reserved</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ✅ Then load Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <!-- Swiper Loaded -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
