@@ -19,6 +19,7 @@
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 30px;
+    width: 100%;
 }
 
 body {
@@ -1219,6 +1220,17 @@ footer {
     margin-top: 60px;
     display: flex;
     align-items: center;
+    gap: 129px;
+    position: relative;
+    overflow: hidden;
+    height: 781px;
+}
+
+.sign-up-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .sign-up-form form {
@@ -1893,14 +1905,14 @@ label.required::after {
     font-size: 16px;
 }
 
-.form-btn{
+.form-btn {
     display: flex;
     gap: 32px;
     align-items: center;
     justify-content: flex-end
 }
 
-.form-btn button{
+.form-btn button {
     background-color: #DB4444;
     padding: 16px 48px;
     outline: none;
@@ -1912,14 +1924,14 @@ label.required::after {
     font-weight: normal;
 }
 
-.form-btn a{
+.form-btn a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: normal;
 }
 
-.about{
+.about {
     position: relative;
     overflow: hidden;
     height: 609px;
@@ -1927,13 +1939,12 @@ label.required::after {
     align-items: center;
 }
 
-.about-content{
+.about-content {
     width: 100%;
     height: 100%;
     display: flex;
     gap: 24px;
     flex-direction: column;
-
 }
 
 .company-para {
@@ -1942,24 +1953,76 @@ label.required::after {
     gap: 24px;
 }
 
-.company-para p{
+.company-para p {
     text-align: justify;
     max-width: 525px;
 }
 
-.about-title h2{
+.about-title h2 {
     font-size: 54px;
     font-weight: 700;
 }
 
 
-.about-hero-image{
+.hero-image{
+    position: absolute;
+    z-index: -1;
+}
+
+.about-hero-image {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     z-index: -1;
 }
+
+.main-buisness-data {
+    margin-top: 140px;
+    display: flex;
+    width: 100%;
+}
+
+.company-buisness-ratio {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #7D8184;
+    padding: 30px 14px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.stat-card:hover {
+    color: #fff;
+    background-color: #DB4444;
+    transition: 0.5s ease;
+}
+
+.stat-card:hover .silver-border i {
+    background-color: #fff;
+    color: #000;
+}
+
+.stat-card:hover .silver-border {
+    background-color: #ffff;
+    background-color: rgba(255, 255, 255, 30%);
+}
+
+
+.stat-label-value p {
+    font-size: 16px;
+}
+
 
 @media screen and (max-width: 991px) {}
 
