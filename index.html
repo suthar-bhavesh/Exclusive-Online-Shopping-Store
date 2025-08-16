@@ -129,23 +129,23 @@
                         </div>
                     </a>
                     <div class="search-icon" onclick="toggleSearch()">
-                        <a href="search.html">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="mobile-menu">
                         <i class="fa-solid fa-bars"></i>
                     </div>
 
-                    <div class="wishlist">
+                    <div class="Wish-list">
                         <a href="wishlist.html">
                             <i class="fa-regular fa-heart"></i>
                             <span class="wishlist-count" id="item-count">0</span>
                         </a>
                     </div>
                     <div class="cart-list">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cartlist-count" id="item-count">0</span>
+                        <a href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cartlist-count" id="item-count">0</span>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -154,10 +154,14 @@
     <div id="nav-bottom-border"></div>
     <section class="banner-section">
         <div class="container">
+            <div class="search-input" id="m-top-search">
+                <input type="text" placeholder="What are you looking for?" name="search" id="searchbox" />
+            </div>
             <div class="main-banner">
                 <div class="banner-left-link">
                     <ul>
-                        <li><a href="#">Woman’s Fashion <i class="fa-solid fa-angle-right"></i></a></li>
+                        <li><a href="404 not-found.html">Woman’s Fashion <i class="fa-solid fa-angle-right"></i></a>
+                        </li>
                         <li><a href="#">Men’s Fashion <i class="fa-solid fa-angle-right"></i></a></li>
                         <li><a href="#">Electronics </a></li>
                         <li><a href="#">Home & Lifestyle </a></li>
@@ -323,7 +327,7 @@
             <div class="cart-carousel">
                 <div class="carousel-content">
                     <div class="product-details">
-                        <div class="cart">
+                        <div class="cart" id="havit-game">
                             <div class="product-img">
                                 <img src="img/VG-remote.png" alt="HAVIT HV-G92 Game">
                             </div>
@@ -337,7 +341,9 @@
                                 <div class="action-icon">
                                     <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
                                         data-product-id="101"></i>
-                                    <i class="fa-regular fa-eye"></i>
+                                    <a href="product-detail.html">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -479,7 +485,9 @@
                                 <div class="action-icon">
                                     <i class="fa-regular fa-heart heart-icon" onclick="toggleWishlist(this)"
                                         data-product-id="101"></i>
-                                    <i class="fa-regular fa-eye"></i>
+                                    <a href="product-detail.html">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -619,7 +627,7 @@
                     <div class="section-heading">
                         <div class="section-name">
                             <div class="red-box"></div>
-                            <h3>Our Products</h3>
+                            <h3>Categories</h3>
                         </div>
                         <div class="categories-main-content">
                             <h2>Browse By Category</h2>
@@ -699,7 +707,7 @@
                     <div class="section-heading">
                         <div class="section-name">
                             <div class="red-box"></div>
-                            <h3>Categories</h3>
+                            <h3>This Month</h3>
                         </div>
                         <div class="categories-main-content">
                             <h2>Best Selling Products</h2>
@@ -1299,7 +1307,7 @@
                         <p>Get 10% off your first order</p>
                         <div class="subcribe-request">
                             <input type="search" placeholder="Enter your Email" id="search">
-                            <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+                            <i class="fa-solid fa-paper-plane"></i>
                         </div>
                     </div>
                     <div class="company-links">

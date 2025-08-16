@@ -127,23 +127,23 @@
                         </div>
                     </a>
                     <div class="search-icon" onclick="toggleSearch()">
-                        <a href="search.html">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="mobile-menu">
                         <i class="fa-solid fa-bars"></i>
                     </div>
 
-                    <div class="wishlist">
+                    <div class="Wish-list">
                         <a href="wishlist.html">
                             <i class="fa-regular fa-heart"></i>
                             <span class="wishlist-count" id="item-count">0</span>
                         </a>
                     </div>
                     <div class="cart-list">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cartlist-count" id="item-count">0</span>
+                        <a href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cartlist-count" id="item-count">0</span>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -151,100 +151,176 @@
     </div>
     <div id="nav-bottom-border"></div>
 
-    <div class="container">
-        <div class="path">
-            <a href="index.html">
-                <p>Home</p>
-            </a>&nbsp;/&nbsp;
-            <a href="cart.html">
-                <p>Cart</p>
-            </a>
-        </div>
-
-        <div class="product-cart">
-            <div class="cart-content">
-                <div class="cart-heading">
-                    <p>Product</p>
-                    <p>Price</p>
-                    <p>Quantity</p>
-                    <p>Subtotal</p>
+    <section>
+        <div class="container">
+            <div class="path">
+                <a href="index.html">
+                    <p>Home</p>
+                </a>&nbsp;/&nbsp;
+                <a href="cart.html">
+                    <p>Cart</p>
+                </a>
+            </div>
+            <div class="search-input" id="m-top-search">
+                <input type="text" placeholder="What are you looking for?" name="search" id="searchbox" />
+            </div>
+            <div class="product-cart">
+                <div class="cart-content">
+                    <div class="cart-heading">
+                        <p>Product</p>
+                        <p>Price</p>
+                        <p>Quantity</p>
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="cart-section">
+                        <div class="cart-items">
+                            <div class="item-img-name">
+                                <i class="fas fa-times remove-item"></i>
+                                <img src="img/LED.png" alt="">
+                                <p>LCD Monitor</p>
+                            </div>
+                            <div class="item-price">
+                                <p>Rs. 56716</p>
+                            </div>
+                            <div class="item-quantity">
+                                <input type="number" value="0" min="01" max="10">
+                            </div>
+                            <div class="item-subtotal">
+                                <p class="item-subtotalCount">0</p>
+                            </div>
+                        </div>
+                        <div class="cart-items">
+                            <div class="item-img-name">
+                                <i class="fas fa-times remove-item"></i>
+                                <img src="img/VG-remote.png" alt="">
+                                <p>H1 Gamepad</p>
+                            </div>
+                            <div class="item-price">
+                                <p>Rs. 48302</p>
+                            </div>
+                            <div class="item-quantity">
+                                <input type="number" value="0" min="01" max="10">
+                            </div>
+                            <div class="item-subtotal">
+                                <p class="item-subtotalCount">0</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="cart-section">
-                    <div class="cart-items">
-                        <div class="item-img-name">
+                <div class="cart-btn">
+                    <a href="index.html">
+                        <button class="cart-updatebtn">
+                            Return To Shop
+                        </button>
+                    </a>
+                    <a href="cart.html">
+                        <button class="cart-updatebtn">
+                            Update cart
+                        </button>
+                    </a>
+                </div>
+                <div class="coupan-code">
+                    <div class="coupan-codeSubmit">
+                        <input type="text" placeholder="Coupan Code" name="Coupan">
+                        <button>Apply Coupan</button>
+                    </div>
+                    <div class="cart-total">
+                        <h3>Cart Total</h3>
+                        <div class="pricing">
+                            <p>Subtotal:</p>
+                            <span>0</span>
+                        </div>
+                        <div class="pricing">
+                            <p>Shipping:</p>
+                            <span>0</span>
+                        </div>
+                        <div class="pricing">
+                            <p>Total:</p>
+                            <span>0</span>
+                        </div>
+                        <div class="checkOut-btn">
+                            <a href="check-out.html">
+                                <button>Procees to checkout</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile secreen cart -->
+    <section>
+        <div class="container">
+            <div class="m-cart">
+                <div class="cart-head">
+                    <h4>Cart</h4>
+                </div>
+                <div class="m-cart-content">
+                    <div class="m-cart-item">
+                        <div class="m-item-details">
                             <i class="fas fa-times remove-item"></i>
-                            <img src="img/LED.png" alt="">
+                            <img src="img/LED.png" alt="Led-Tv">
                             <p>LCD Monitor</p>
                         </div>
-                        <div class="item-price">
+                        <div class="price-quantity">
                             <p>Rs. 56716</p>
-                        </div>
-                        <div class="item-quantity">
                             <input type="number" value="0" min="01" max="10">
                         </div>
-                        <div class="item-subtotal">
-                            <p class="item-subtotalCount">0</p>
-                        </div>
                     </div>
-                    <div class="cart-items">
-                        <div class="item-img-name">
+                    <div class="m-cart-item">
+                        <div class="m-item-details">
                             <i class="fas fa-times remove-item"></i>
-                            <img src="img/VG-remote.png" alt="">
-                            <p>H1 Gamepad</p>
+                            <img src="img/VG-remote.png" alt="VG-remote">
+                            <p>LCD Monitor</p>
                         </div>
-                        <div class="item-price">
+                        <div class="price-quantity">
                             <p>Rs. 48302</p>
-                        </div>
-                        <div class="item-quantity">
                             <input type="number" value="0" min="01" max="10">
                         </div>
-                        <div class="item-subtotal">
-                            <p class="item-subtotalCount">0</p>
+                    </div>
+                </div>
+                <div class="coupan-code">
+                    <div class="coupan-codeSubmit">
+                        <input type="text" placeholder="Coupan Code" name="Coupan">
+                        <button>Apply Coupan</button>
+                    </div>
+                    <div class="cart-total">
+                        <h3>Cart Total</h3>
+                        <div class="pricing">
+                            <p>Subtotal:</p>
+                            <span>0</span>
+                        </div>
+                        <div class="pricing">
+                            <p>Shipping:</p>
+                            <span>0</span>
+                        </div>
+                        <div class="pricing">
+                            <p>Total:</p>
+                            <span>0</span>
+                        </div>
+                        <div class="checkOut-btn">
+                            <a href="check-out.html">
+                                <button>Procees to checkout</button>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cart-btn">
-                <a href="index.html">
-                    <button class="cart-updatebtn">
-                        Return To Shop
-                    </button>
-                </a>
-                <a href="cart.html">
-                    <button class="cart-updatebtn">
-                        Update cart
-                    </button>
-                </a>
-            </div>
-            <div class="coupan-code">
-                <div class="coupan-codeSubmit">
-                    <input type="text" placeholder="Coupan Code" name="Coupan">
-                    <button>Apply Coupan</button>
-                </div>
-                <div class="cart-total">
-                    <h3>Cart Total</h3>
-                    <div class="pricing">
-                        <p>Subtotal:</p>
-                        <span>0</span>
-                    </div>
-                    <div class="pricing">
-                        <p>Shipping:</p>
-                        <span>0</span>
-                    </div>
-                    <div class="pricing">
-                        <p>Total:</p>
-                        <span>0</span>
-                    </div>
-                    <div class="checkOut-btn">
-                        <a href="check-out.html">
-                            <button>Procees to checkout</button>
-                        </a>
-                    </div>
+                <div class="m-cart-btn">
+                    <a href="index.html">
+                        <button class="cart-updatebtn">
+                            Return To Shop
+                        </button>
+                    </a>
+                    <a href="cart.html">
+                        <button class="cart-updatebtn">
+                            Update cart
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
 
     <footer>
         <div class="container">
@@ -256,7 +332,7 @@
                         <p>Get 10% off your first order</p>
                         <div class="subcribe-request">
                             <input type="search" placeholder="Enter your Email" id="search">
-                            <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+                            <i class="fa-solid fa-paper-plane"></i>
                         </div>
                     </div>
                     <div class="company-links">

@@ -1,7 +1,5 @@
 // banner Carousel
 
-// const { default: Swiper } = require("swiper");
-
 $(document).ready(function () {
     $('.banner-carousel').slick({
         dots: true,
@@ -36,15 +34,20 @@ function toggleMenu() {
     $('.mobile-nav').toggleClass('show');
 }
 
-// search input
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".hamburger");
+    const nav = document.querySelector(".mobile-nav");
 
-$(document).ready(function () {
-    $('#search-body').ready(function () {
-        $('#searchbox').focus();
-        $('.search-input').addClass('show');
-    })
 
+    menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
 });
+
+// search input
+function toggleSearch() {
+    document.getElementById("searchbox").focus();
+}
 
 
 function profilemanage() {
@@ -62,35 +65,51 @@ if (!endTime) {
     endTime = Number(endTime);
 }
 
-
-function updateCountdown() {
-    const now = new Date().getTime();
-
-    const distance = endTime - now;
-
-    if (distance <= 0) {
-        document.getElementById("days").textContent = "0";
-        document.getElementById("hours").textContent = "0";
-        document.getElementById("minutes").textContent = "0";
-        document.getElementById("seconds").textContent = "0";
+document.addEventListener("DOMContentLoaded", function () {
+    if (!document.getElementById("days")) {
         return;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
+    const targetDate = new Date("2025-08-20T23:59:59").getTime();
 
 
-    document.getElementById("days").textContent = String(days).padStart(2, '0');
-    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-}
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const daysE1 = document.getElementById("days");
+        const hoursE1 = document.getElementById("hours");
+        const minutesE1 = document.getElementById("minutes");
+        const secondsE1 = document.getElementById("seconds");
 
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+        if (distance <= 0) {
+            daysE1.textContent = "00";
+            hoursE1.textContent = "00";
+            minutesE1.textContent = "00";
+            secondsE1.textContent = "00";
+
+            clearInterval(timer);
+            return;
+        }
+
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+
+        daysE1.textContent = String(days).padStart(2, '0');
+        hoursE1.textContent = String(hours).padStart(2, '0');
+        minutesE1.textContent = String(minutes).padStart(2, '0');
+        secondsE1.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+
+    const timer = setInterval(updateCountdown, 1000);
+})
 
 
 // Get wishlist from localStorage
@@ -171,23 +190,22 @@ function itemColor(el) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Init Swiper only if window is mobile
-    const swiper = new Swiper(".mobile-swiper", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 10,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+    const swiperContainer = document.querySelector(".mobile-swiper");
+
+    if (swiperContainer && typeof Swiper !== "undefined") {
+        const slides = parseInt(swiperContainer.dataset.slides) || 1;
+        const loop = swiperContainer.dataset.loop === "true";
+
+        new Swiper(".mobile-swiper", {
+            slidesPerView: slides,
+            loop: loop,
+            autoplay: true,
+            autoplaySpeed: 1000
+        });
+    }
 });
+
+
 
 // On Scroll Click arrow 
 window.onscroll = function () {
@@ -200,9 +218,33 @@ window.onscroll = function () {
 
 };
 
-document.getElementById("scroll-up").addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scroll-up");
+    if (scrollBtn) {
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".m-product-carousel");
+
+    // Run only if element exists and Slick is available
+    if (carousel && typeof $ !== "undefined" && typeof $.fn.slick !== "undefined") {
+        $(".m-product-carousel").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: false,
+            dots: true,
+            responsive: [
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
+        });
+    }
+});
+
