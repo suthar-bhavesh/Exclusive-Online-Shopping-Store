@@ -34,6 +34,10 @@ function toggleMenu() {
     $('.mobile-nav').toggleClass('show');
 }
 
+function toggleCate() {
+    $('.m-categories').toggleClass('show-categories')
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.querySelector(".hamburger");
     const nav = document.querySelector(".mobile-nav");
@@ -41,6 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menuBtn.addEventListener("click", () => {
         nav.classList.toggle("active");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".categries-menu");
+    const nav = document.querySelector(".m-categories");
+
+
+    menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("categories-active");
     });
 });
 
