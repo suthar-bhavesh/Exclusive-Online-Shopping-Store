@@ -19,27 +19,22 @@ const dots = document.querySelectorAll(".dot");
 
 const firstslideClone = slides[0].cloneNode(true);
 const lastslideClone = slides[slides.length - 1].cloneNode(true);
+carousel.append(firstslideClone);
+carousel.prepend(lastslideClone);
 
 console.log(firstslideClone);
 console.log(lastslideClone);
-
-carousel.append(firstslideClone);
-carousel.prepend(lastslideClone);
 
 let index = 1;
 carousel.style.transform = `translateX(-${index * 100}%)`;
 
 const updateDots = () => {
   dots.forEach((d) => d.classList.remove("active"));
-
   const dotsIndex = (index - 1 + slides.length) % slides.length;
-
   if (dots[dotsIndex]) {
     dots[dotsIndex].classList.add("active");
   }
 };
-
-updateDots();
 
 const updateSlider = (infiniteSlider) => {
   if (index <= 0 || index >= slides.length + 1) return;
@@ -48,7 +43,6 @@ const updateSlider = (infiniteSlider) => {
 
   carousel.style.transition = "0.5s ease-in-out";
   carousel.style.transform = `translateX(-${index * 100}%)`;
-
   updateDots();
 };
 updateSlider();
@@ -68,7 +62,7 @@ carousel.addEventListener("transitionend", () => {
 
 let autoSlide = setInterval(() => {
   updateSlider(1);
-}, 3000);
+}, 5000);
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
@@ -77,8 +71,7 @@ dots.forEach((dot, i) => {
     carousel.style.transition = "0.5s ease-in-out";
     carousel.style.transform = `translateX(-${index * 100}%)`;
     updateDots();
-
-    autoSlide = setInterval(() => updateSlider(1), 3000);
+    autoSlide = setInterval(() => updateSlider(1), 5000);
   });
 });
 
@@ -110,7 +103,7 @@ carousel.addEventListener(
 
 setInterval(() => {
   updateSlider(1);
-}, 3000);
+}, 5000);
 
 // mobile-nav
 
