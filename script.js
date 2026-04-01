@@ -1,3 +1,47 @@
+// banner carousel
+const carousel = document.querySelector(".banner-carousel");
+const slides = document.querySelectorAll(".carousel-cart");
+const dost = document.querySelectorAll(".dot");
+
+console.log(slides);
+
+const firstslideClone = slides[0].cloneNode(true);
+const lastslideClone = slides[slides.length - 1].cloneNode(true);
+carousel.append(firstslideClone);
+carousel.prepend(lastslideClone);
+
+console.log(firstslideClone);
+console.log(lastslideClone);
+
+let index = 1;
+carousel.style.transform = `translateX(-${index * 100}%)`;
+
+const updateSlider = (infiniteSlider) => {
+  if (index < 0 || index >= slides.length + 1) return;
+
+  index += infiniteSlider;
+
+  carousel.style.transition = `transform 0.5s ease-in-out`;
+  carousel.style.transform = `translateX(-${index * 100}%)`;
+};
+
+carousel.addEventListener("transitionend", () => {
+  if (index === slides.length + 1) {
+    carousel.style.transition = "none";
+    index = 1;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+  if (index === 0) {
+    carousel.style.transition = "none";
+    index = slides.length;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+});
+
+setInterval(() => {
+  updateSlider(1);
+}, 4000);
+
 // mobile-nav
 
 function toggleMenu() {
