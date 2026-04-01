@@ -1,7 +1,7 @@
 // banner carousel
 const carousel = document.querySelector(".banner-carousel");
 const slides = document.querySelectorAll(".carousel-cart");
-const dost = document.querySelectorAll(".dot");
+const dots = document.querySelectorAll(".dot");
 
 console.log(slides);
 
@@ -36,7 +36,21 @@ carousel.addEventListener("transitionend", () => {
     index = slides.length;
     carousel.style.transform = `translateX(-${index * 100}%)`;
   }
+  console.log(index);
+  updateDot();
 });
+
+const updateDot = () => {
+  dots.forEach((indicator) => {
+    indicator.classList.remove("active");
+
+    let dotIndex = (index - 1 + slides.length) % slides.length;
+
+    if (dots[dotIndex]) {
+      dots[dotIndex].classList.add("active");
+    }
+  });
+};
 
 setInterval(() => {
   updateSlider(1);
