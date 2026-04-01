@@ -36,7 +36,6 @@ carousel.addEventListener("transitionend", () => {
     index = slides.length;
     carousel.style.transform = `translateX(-${index * 100}%)`;
   }
-  console.log(index);
   updateDot();
 });
 
@@ -52,9 +51,40 @@ const updateDot = () => {
   });
 };
 
-setInterval(() => {
+const autoSlide = setInterval(() => {
   updateSlider(1);
 }, 4000);
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+carousel.addEventListener(
+  "touchstart",
+  (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    clearInterval(autoSlide);
+  },
+  { passive: true },
+);
+
+carousel.addEventListener(
+  "touchend",
+  (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    mSwiper();
+  },
+  { passive: true },
+);
+
+const mSwiper = () => {
+  let swipThreshold = 50;
+
+  if (touchStartX - touchEndX > swipThreshold) {
+    updateSlider(1);
+  } else if (touchEndX - touchStartX > swipThreshold) {
+    updateSlider(-1);
+  }
+};
 
 // mobile-nav
 
